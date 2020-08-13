@@ -1,6 +1,11 @@
-# Name
+# Cloud Run configured with Serverless NEG
 
-Overview
+A network endpoint group (NEG) specifies a group of backend endpoints for a load balancer.
+Serverless NEG is a backend that points to a Cloud Run, App Engine, or Cloud Functions service.
+
+- A Cloud Run service or a group of services sharing the same URL pattern.
+- A Cloud Functions function or a group of functions sharing the same URL pattern.
+- An App Engine app (Standard or Flex), a specific service within an app, or even a specific version of an app.
 
 ## Description
 
