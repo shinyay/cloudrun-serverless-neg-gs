@@ -19,6 +19,14 @@ $ cd spring-music-container
 $ gcloud builds submit --tag gcr.io/(gcloud config get-value project)/hello-app
 ```
 
+### Deploy App to Cloud Run
+- gcloud run deploy --image <IMAGE_URL> --platform managed --region <REGION> --memory 512M --allow-unauthenticated hello-app
+
+```
+$ cd script
+$ ./deploy-cloudrun.fish -i gcr.io/(gcloud config get-value project)/hello-app
+```
+
 ## Features
 
 - feature:1
