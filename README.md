@@ -7,6 +7,8 @@ Serverless NEG is a backend that points to a Cloud Run, App Engine, or Cloud Fun
 - A Cloud Functions function or a group of functions sharing the same URL pattern.
 - An App Engine app (Standard or Flex), a specific service within an app, or even a specific version of an app.
 
+![lb-serverless-neg](https://cloud.google.com/load-balancing/images/lb-serverless-simple.svg)
+
 ## Description
 
 ## Demo
