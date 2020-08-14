@@ -7,7 +7,7 @@ function do_func
   or return 1
 
   if set -lq _flag_help
-    echo "build-container.fish -n/--name <IMAGE_NAME>"
+    echo "build-container.fish -n/--name <APP_NAME>"
     return
   end
 
