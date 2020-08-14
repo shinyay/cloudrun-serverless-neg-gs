@@ -12,7 +12,7 @@ Serverless NEG is a backend that points to a Cloud Run, App Engine, or Cloud Fun
 ## Description
 
 ## Demo
-### Containerize an app and upload it to Container Registry
+### 1. Containerize an app and upload it to Container Registry
 - gcloud builds submit --tag gcr.io/(gcloud config get-value project)/hello-app
 
 ```
@@ -20,7 +20,7 @@ $ cd script
 $ ./build-container.fish -n hello-app
 ```
 
-### Deploy App to Cloud Run
+### 2. Deploy App to Cloud Run
 - gcloud run deploy --image <IMAGE_URL> --platform managed --region <REGION> --memory 512M --allow-unauthenticated hello-app
 
 ```
