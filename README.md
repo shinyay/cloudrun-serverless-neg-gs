@@ -28,6 +28,9 @@ $ cd script
 $ ./deploy-cloudrun.fish -i gcr.io/(gcloud config get-value project)/hello-app
 ```
 
+### 3. Create Serverless NEG
+- gcloud beta compute network-endpoint-groups create hello-app-serverless-neg --region <REGION> --network-endpoint-type=SERVERLESS --cloud-run-service hello-app
+
 ## Features
 
 - feature:1
