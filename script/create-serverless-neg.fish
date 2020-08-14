@@ -18,6 +18,8 @@ function do_func
   --region $_region \
   --network-endpoint-type SERVERLESS \
   --cloud-run-service $_flag_name
+
+  gcloud beta compute network-endpoint-groups list
 end
 
 do_func $argv
