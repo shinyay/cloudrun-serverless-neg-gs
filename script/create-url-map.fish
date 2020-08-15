@@ -13,8 +13,6 @@ function do_func
   or set -l _flag_name hello-app
 
   gcloud compute url-maps create $_flag_name-url-map --default-service $_flag_name-backend-service
-
-  gcloud compute url-maps list
 end
 
 do_func $argv
