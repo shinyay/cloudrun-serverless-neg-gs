@@ -38,6 +38,13 @@ $ cd script
 $ ./create-serverless-neg.fish -n hello-app
 ```
 
+### 4. Backend
+- gcloud compute backend-services create hello-app-backend-service --global
+
+```
+$ cd script
+$ ./create-backend-service.fish -n hello-app
+```
 
 ## Features
 
