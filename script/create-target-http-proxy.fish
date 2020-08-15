@@ -14,7 +14,7 @@ function do_func
 
   gcloud compute target-http-proxies create $_flag_name-target-http-proxy --url-map $_flag_name-url-map
 
-  gcloud compute target-http-proxies
+  gcloud compute target-http-proxies list
 end
 
 do_func $argv
