@@ -64,6 +64,10 @@ $ cd script
 $ ./create-url-map.fish -n hello-app
 ```
 
+### 6. Target HTTP Proxy
+#### Create Target HTTP Proxy
+- gcloud compute target-http-proxies create hello-app-target-http-proxy --url-map hello-app-url-map
+
 ## Features
 
 - feature:1
