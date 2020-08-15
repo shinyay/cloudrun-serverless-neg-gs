@@ -72,6 +72,11 @@ $ ./create-url-map.fish -n hello-app
 $ cd script
 $ ./create-target-http-proxy.fish -n hello-app
 ```
+
+### 7. Forwarding Rule
+#### Create Forwarding Rule
+- gcloud compute forwarding-rules create hello-app-forwarding-rule --target-http-proxy hello-app-target-http-proxy --global --ports 80
+
 ## Features
 
 - feature:1
