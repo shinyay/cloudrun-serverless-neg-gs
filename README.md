@@ -50,6 +50,10 @@ $ ./create-backend-service.fish -n hello-app
 #### Add Serverless NEG to Backend Service
 - gcloud beta compute backend-services add-backend hello-app-backend-service --global --network-endpoint-group hello-app-serverless-neg --network-endpoint-group-region <REGION>
 
+```
+$ cd script
+$ ./add-backend.fish -n hello-app
+
 ## Features
 
 - feature:1
