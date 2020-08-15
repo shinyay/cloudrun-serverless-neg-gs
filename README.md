@@ -59,6 +59,10 @@ $ ./add-backend.fish -n hello-app
 #### Create URL Map
 - gcloud compute url-maps create hello-app-url-map --default-service hello-app-backend-service
 
+```
+$ cd script
+$ ./create-url-map.fish -n hello-app
+```
 
 ## Features
 
