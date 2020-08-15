@@ -20,7 +20,8 @@ $ cd script
 $ ./build-container.fish -n hello-app
 ```
 
-### 2. Deploy App to Cloud Run
+### 2. Cloud Run
+#### Deploy App to Cloud Run
 - gcloud run deploy --image <IMAGE_URL> --platform managed --region <REGION> --memory 512M --allow-unauthenticated hello-app
 
 ```
@@ -28,8 +29,15 @@ $ cd script
 $ ./deploy-cloudrun.fish -i gcr.io/(gcloud config get-value project)/hello-app
 ```
 
-### 3. Create Serverless NEG
+### 3. Serverless NEG
+#### Create Serverless NEG
 - gcloud beta compute network-endpoint-groups create hello-app-serverless-neg --region <REGION> --network-endpoint-type=SERVERLESS --cloud-run-service hello-app
+
+```
+$ cd script
+$ ./create-serverless-neg.fish -n hello-app
+```
+
 
 ## Features
 
