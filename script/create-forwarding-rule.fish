@@ -17,6 +17,8 @@ function do_func
   --global \
   --ports 80
 
+  gcloud compute forwarding-rules list
+
   gcloud compute forwarding-rules describe $_flag_name-forwarding-rule \
   --global \
   --format "value(IPAddress)"
