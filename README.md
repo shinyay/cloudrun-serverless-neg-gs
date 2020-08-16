@@ -82,6 +82,9 @@ $ cd script
 $ ./create-forwarding-rule.fish -n hello-app
 ```
 
+### 8. Clean up
+- gcloud compute forwarding-rules delete hello-app-forwarding-rule --global --quiet
+
 ## Features
 
 - feature:1
