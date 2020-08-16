@@ -85,7 +85,8 @@ $ ./create-forwarding-rule.fish -n hello-app
 ### 8. Clean up
 - Delete Forwarding Rule
   - `gcloud compute forwarding-rules delete hello-app-forwarding-rule --global --quiet`
-- gcloud compute target-http-proxies delete hello-app-target-http-proxy --quiet
+- Delete Target HTTP Proxy
+  - `gcloud compute target-http-proxies delete hello-app-target-http-proxy --quiet`
 - gcloud compute url-maps delete hello-app-url-map --quiet
 - gcloud compute backend-services delete hello-app-backend-service --global --quiet
 - gcloud beta compute network-endpoint-groups delete hello-app-serverless-neg --region us-central1 --quiet
