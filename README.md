@@ -104,6 +104,8 @@ $ ./create-forwarding-rule.fish -n hello-app
   - Serverless NEGs can only be used with HTTP and HTTPS target proxies. Services that use serverless NEGs cannot be used with TCP or SSL target proxies
 - URL map
   - The forwarding selection for an external HTTP(S) load balancer is based on a URL map. With a URL map, target HTTP(S) proxies determine the backend service to be used by checking the request host name and path in the URL map. Load balancers can have multiple backend services referenced from the URL map. Each backend service can be associated with a different backend type. For example, you can have a backend service for a serverless NEG and another backend service for Compute Engine instance groups.
+- Backend service
+  - Serverless NEGs can be used as backends for backend services in a load balancer. A backend service can be backed by several serverless NEGs, but each serverless NEG can only point to either the FQDN for a single Cloud Run (fully managed) (or App Engine or Cloud Functions service, or a URL mask that points to multiple services serving at the same domain.
 
 ## Requirement
 
