@@ -102,6 +102,8 @@ $ ./create-forwarding-rule.fish -n hello-app
   - The forwarding rule is part of the frontend configuration and contains an external IP address, the IP version (IPv4 or IPv6), a protocol (HTTP or HTTPS (includes HTTP/2), and a port number (80 or 443)
 - Target proxy
   - Serverless NEGs can only be used with HTTP and HTTPS target proxies. Services that use serverless NEGs cannot be used with TCP or SSL target proxies
+- URL map
+  - The forwarding selection for an external HTTP(S) load balancer is based on a URL map. With a URL map, target HTTP(S) proxies determine the backend service to be used by checking the request host name and path in the URL map. Load balancers can have multiple backend services referenced from the URL map. Each backend service can be associated with a different backend type. For example, you can have a backend service for a serverless NEG and another backend service for Compute Engine instance groups.
 
 ## Requirement
 
