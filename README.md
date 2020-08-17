@@ -98,8 +98,8 @@ $ ./create-forwarding-rule.fish -n hello-app
 
 ## Features
 
-- feature:1
-- feature:2
+- Forwarding rule
+  - The forwarding rule is part of the frontend configuration and contains an external IP address, the IP version (IPv4 or IPv6), a protocol (HTTP or HTTPS (includes HTTP/2), and a port number (80 or 443).
 
 ## Requirement
 
