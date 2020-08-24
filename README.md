@@ -64,6 +64,10 @@ $ cd script
 $ ./create-url-map.fish -n hello-app
 ```
 
+### SSL Certificate
+#### Create Managed SSL Certificate
+- `gcloud beta compute ssl-certificates create zoneprinter-cert --domains <DOMAIN>`
+
 ### 6. Target HTTP Proxy
 #### Create Target HTTP Proxy
 - `gcloud compute target-http-proxies create hello-app-target-http-proxy --url-map hello-app-url-map`
