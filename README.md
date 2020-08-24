@@ -113,6 +113,9 @@ $ ./create-forwarding-rule.fish -n hello-app
   - Management Tools -> Nameservers
   - Nameserver from Cloud DNS
 
+#### Confirm Applied Certification
+- `gcloud beta compute ssl-certificates describe hello-app-cert`
+
 ### 8. Clean up
 - Delete Forwarding Rule
   - `gcloud compute forwarding-rules delete hello-app-forwarding-rule --global --quiet`
