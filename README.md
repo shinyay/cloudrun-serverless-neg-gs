@@ -68,14 +68,17 @@ $ ./create-url-map.fish -n hello-app
 #### Create Managed SSL Certificate
 - `gcloud beta compute ssl-certificates create hello-app-cert --domains <DOMAIN>`
 
-### 6. Target HTTP Proxy
+### 6. Target HTTP(s) Proxy
 #### Create Target HTTP Proxy
-- `gcloud compute target-http-proxies create hello-app-target-http-proxy --url-map hello-app-url-map --ssl-certificates`
+- `gcloud compute target-http-proxies create hello-app-target-http-proxy --url-map hello-app-url-map`
 
 ```
 $ cd script
 $ ./create-target-http-proxy.fish -n hello-app
 ```
+
+#### Create Target HTTPS Proxy
+- `gcloud compute target-https-proxies create hello-app-target-http-proxy --url-map hello-app-url-map --ssl-certificates hello-app-cert`
 
 ### 7. Forwarding Rule
 #### Create Forwarding Rule
