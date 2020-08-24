@@ -107,6 +107,11 @@ $ ./create-forwarding-rule.fish -n hello-app
     - DNS name: YOUR_DOMAIN
   - Add Record Set
     - Type A: YOUR_RESERVED_STATIC_IP
+- Freenom
+  - Service -> My Domains
+  - Manage Domain
+  - Management Tools -> Nameservers
+  - Nameserver from Cloud DNS
 
 ### 8. Clean up
 - Delete Forwarding Rule
