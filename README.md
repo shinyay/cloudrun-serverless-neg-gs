@@ -101,6 +101,13 @@ $ ./create-forwarding-rule.fish -n hello-app
 #### Create Forwarding Rule for HTTPS
 - `gcloud compute forwarding-rules create hello-app-forwarding-rule --target-https-proxy hello-app-target-http-proxy --address hello-app-ip --global --ports 443`
 
+### DNS Record
+- Cloud DNS
+  - Create Zone
+    - DNS name: YOUR_DOMAIN
+  - Add Record Set
+    - Type A: YOUR_RESERVED_STATIC_IP
+
 ### 8. Clean up
 - Delete Forwarding Rule
   - `gcloud compute forwarding-rules delete hello-app-forwarding-rule --global --quiet`
