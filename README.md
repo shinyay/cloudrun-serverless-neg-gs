@@ -83,7 +83,7 @@ $ ./create-target-http-proxy.fish -n hello-app
 ### Static IP Addresw
 #### Reserve a static IP address
 - `gcloud compute addresses create --global hello-app-ip`
-
+- `gcloud compute addresses describe --global hello-app-ip`
 
 
 ### 7. Forwarding Rule
