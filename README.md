@@ -90,13 +90,16 @@ $ ./create-target-http-proxy.fish -n hello-app
 
 
 ### 7. Forwarding Rule
-#### Create Forwarding Rule
-- `gcloud compute forwarding-rules create hello-app-forwarding-rule --target-http-proxy hello-app-target-http-proxy --global --ports 80`
+#### Create Forwarding Rule for HTTP
+- `gcloud compute forwarding-rules create hello-app-forwarding-rule --target-http-proxy hello-app-target-http-proxy --address hello-app-ip --global --ports 80`
 
 ```
 $ cd script
 $ ./create-forwarding-rule.fish -n hello-app
 ```
+
+#### Create Forwarding Rule for HTTPS
+- `gcloud compute forwarding-rules create hello-app-forwarding-rule --target-https-proxy hello-app-target-http-proxy --address hello-app-ip --global --ports 443`
 
 ### 8. Clean up
 - Delete Forwarding Rule
