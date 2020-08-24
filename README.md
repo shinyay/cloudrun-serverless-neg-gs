@@ -80,6 +80,12 @@ $ ./create-target-http-proxy.fish -n hello-app
 #### Create Target HTTPS Proxy
 - `gcloud compute target-https-proxies create hello-app-target-http-proxy --url-map hello-app-url-map --ssl-certificates hello-app-cert`
 
+### Static IP Addresw
+#### Reserve a static IP address
+- `gcloud compute addresses create --global hello-app-ip`
+
+
+
 ### 7. Forwarding Rule
 #### Create Forwarding Rule
 - `gcloud compute forwarding-rules create hello-app-forwarding-rule --target-http-proxy hello-app-target-http-proxy --global --ports 80`
