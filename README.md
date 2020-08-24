@@ -13,7 +13,7 @@ Serverless NEG is a backend that points to a Cloud Run, App Engine, or Cloud Fun
 
 ## Demo
 ### 1. Containerize an app and upload it to Container Registry
-- gcloud builds submit --tag gcr.io/(gcloud config get-value project)/hello-app
+- `gcloud builds submit --tag gcr.io/(gcloud config get-value project)/hello-app`
 
 ```
 $ cd script
@@ -22,7 +22,7 @@ $ ./build-container.fish -n hello-app
 
 ### 2. Cloud Run
 #### Deploy App to Cloud Run
-- gcloud run deploy --image <IMAGE_URL> --platform managed --region <REGION> --memory 512M --allow-unauthenticated hello-app
+- `gcloud run deploy --image <IMAGE_URL> --platform managed --region <REGION> --memory 512M --allow-unauthenticated hello-app`
 
 ```
 $ cd script
@@ -31,7 +31,7 @@ $ ./deploy-cloudrun.fish -i gcr.io/(gcloud config get-value project)/hello-app
 
 ### 3. Serverless NEG
 #### Create Serverless NEG
-- gcloud beta compute network-endpoint-groups create hello-app-serverless-neg --region <REGION> --network-endpoint-type SERVERLESS --cloud-run-service hello-app
+- `gcloud beta compute network-endpoint-groups create hello-app-serverless-neg --region <REGION> --network-endpoint-type SERVERLESS --cloud-run-service hello-app`
 
 ```
 $ cd script
@@ -40,7 +40,7 @@ $ ./create-serverless-neg.fish -n hello-app
 
 ### 4. Backend Service
 #### Create Backend Service
-- gcloud compute backend-services create hello-app-backend-service --global
+- `gcloud compute backend-services create hello-app-backend-service --global`
 
 ```
 $ cd script
@@ -48,7 +48,7 @@ $ ./create-backend-service.fish -n hello-app
 ```
 
 #### Add Serverless NEG to Backend Service
-- gcloud beta compute backend-services add-backend hello-app-backend-service --global --network-endpoint-group hello-app-serverless-neg --network-endpoint-group-region <REGION>
+- `gcloud beta compute backend-services add-backend hello-app-backend-service --global --network-endpoint-group hello-app-serverless-neg --network-endpoint-group-region <REGION>`
 
 ```
 $ cd script
@@ -57,7 +57,7 @@ $ ./add-backend.fish -n hello-app
 
 ### 5. URL Map
 #### Create URL Map
-- gcloud compute url-maps create hello-app-url-map --default-service hello-app-backend-service
+- `gcloud compute url-maps create hello-app-url-map --default-service hello-app-backend-service`
 
 ```
 $ cd script
@@ -66,7 +66,7 @@ $ ./create-url-map.fish -n hello-app
 
 ### 6. Target HTTP Proxy
 #### Create Target HTTP Proxy
-- gcloud compute target-http-proxies create hello-app-target-http-proxy --url-map hello-app-url-map
+- `gcloud compute target-http-proxies create hello-app-target-http-proxy --url-map hello-app-url-map`
 
 ```
 $ cd script
@@ -75,7 +75,7 @@ $ ./create-target-http-proxy.fish -n hello-app
 
 ### 7. Forwarding Rule
 #### Create Forwarding Rule
-- gcloud compute forwarding-rules create hello-app-forwarding-rule --target-http-proxy hello-app-target-http-proxy --global --ports 80
+- `gcloud compute forwarding-rules create hello-app-forwarding-rule --target-http-proxy hello-app-target-http-proxy --global --ports 80`
 
 ```
 $ cd script
