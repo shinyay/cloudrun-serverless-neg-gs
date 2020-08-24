@@ -10,6 +10,7 @@ Serverless NEG is a backend that points to a Cloud Run, App Engine, or Cloud Fun
 ![lb-serverless-neg](https://cloud.google.com/load-balancing/images/lb-serverless-simple.svg)
 
 ## Description
+![HTTP-LB](images/HTTP-LB.png)
 
 ## Demo
 ### 1. Containerize an app and upload it to Container Registry
